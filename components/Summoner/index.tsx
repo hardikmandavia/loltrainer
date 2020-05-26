@@ -11,7 +11,7 @@ type Props = PropsWithNavigation<SummonerProps, Routes.SUMMONER>;
 
 const Summoner = ({ route, navigation }: Props) => {
   const handlePress = () => {
-    navigation.navigate(Routes.HOME);
+    navigation.goBack();
   }
 
   return (
