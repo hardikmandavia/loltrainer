@@ -1,1 +1,1 @@
-export { default as SummonerReducer } from './summoner';
+export { default as Summoner } from './summoner';

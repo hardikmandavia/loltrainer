@@ -1,22 +1,20 @@
 import React from 'react';
 import { Button } from 'react-native';
 
-import { Routes, PropsWithNavigation } from '../../routes';
+import { Input, View } from './index.styled';
 
-import { View, Title } from './index.styled';
+interface Props {
+  name: string;
+  onNameChange: (value: string) => void;
+  onSearchPress: () => void;
+};
 
-interface HomeProps {};
-
-type Props = PropsWithNavigation<HomeProps, Routes.HOME>;
-
-const Home = ({ navigation }: Props) => {
-  const handlePress = () => {
-    navigation.navigate(Routes.SUMMONER, { summonerName: 'sentaiyou'});
-  }
+const Home = ({ name, onNameChange, onSearchPress }: Props) => {
+  console.log("HERE", name);
   return (
     <View>
-      <Title>This is the Home page</Title>
-      <Button title="Search" onPress={handlePress} />
+      <Input value={name} onChangeText={onNameChange}/>
+      <Button title="Search" onPress={onSearchPress} />
     </View>
   );
 }

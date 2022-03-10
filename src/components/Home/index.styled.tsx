@@ -1,6 +1,12 @@
 import styled from 'styled-components/native';
 import { primary } from '../../styles/colors';
 
+export const Input = styled.TextInput`
+  width: 100%;
+  height: 40px;
+  background-color: white;
+`;
+
 export const View = styled.View`
   flex: 1;
   background-color: ${primary};

@@ -1,0 +1,7 @@
+query Summoner($name: String!, $region: String!) {
+  fetchSummoner(name: $name, region: $region) {
+    name
+    accountId
+    id
+  }
+}

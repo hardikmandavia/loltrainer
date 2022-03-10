@@ -1,4 +1,5 @@
 import React from 'react';
+import { useQuery } from '@apollo/react-hooks';
 import { Button } from 'react-native';
 
 import { Routes, PropsWithNavigation } from '../../routes';
@@ -9,7 +10,8 @@ interface SummonerProps {}
 
 type Props = PropsWithNavigation<SummonerProps, Routes.SUMMONER>;
 
-const Summoner = ({ route, navigation }: Props) => {
+export default function Summoner({ route, navigation }: Props) {
+  // const { data, loading, error } = useQuery()
   const handlePress = () => {
     navigation.goBack();
   }
@@ -20,6 +22,4 @@ const Summoner = ({ route, navigation }: Props) => {
       <Button title="Home" onPress={handlePress} />
     </View>
   );
-}
-
-export default Summoner;
+};
